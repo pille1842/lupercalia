@@ -1,0 +1,225 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Anmeldung zum Großen Kartelltag 2023{% endblock %}
+
+{% block body %}
+    <div class="uk-container">
+        {{ form_start(form) }}
+            <h1 class="uk-heading-medium">Anmeldung zum Großen Kartelltag 2023</h1>
+
+            <h2 class="uk-heading-small">Persönliche Angaben</h2>
+
+            <p>
+                Diese Daten benötigen wir, um Ihre Anmeldung verarbeiten zu können. Informationen darüber,
+                wie wir diese Daten speichern und verwenden, finden Sie in unserer <a href="#">Datenschutzerklärung</a>.
+            </p>
+
+            {{ form_row(form.firstName) }}
+            {{ form_row(form.lastName) }}
+            {{ form_row(form.nickName) }}
+            {{ form_row(form.email) }}
+
+            <h2 class="uk-heading-small">Veranstaltungen</h2>
+
+            <p>
+                Bitte setzen Sie den Haken bei den Veranstaltungen, an denen Sie teilnehmen möchten. Wenn Sie Gäste
+                mitbringen, geben Sie die Anzahl der Gäste bitte in das entsprechende Feld ein. <em>Zählen Sie
+                sich selbst dabei nicht mit.</em>
+            </p>
+
+            <p class="uk-text-lead">Begrüßungsabend</p>
+
+            <div uk-grid class="uk-child-width-expand">
+                <div uk-grid class="uk-width-1-2@m">
+                    <div uk-grid class="uk-child-width-expand uk-width-1-1">
+                        <div class="uk-width-1-6">
+                            <span uk-icon="icon: calendar; ratio: 2">
+                        </div>
+                        <div class="uk-width-5-6">
+                            <b>
+                                Freitag, 30. Juni 2023, 20:00&nbsp;Uhr&nbsp;<abbr title="mit akademischem Viertel">c.t.</abbr>
+                            </b>
+                        </div>
+                    </div>
+                    <div uk-grid class="uk-child-width-expand uk-width-1-1">
+                        <div class="uk-width-1-6">
+                            <span uk-icon="icon: location; ratio: 2">
+                        </div>
+                        <div class="uk-width-5-6">
+                            <addr>
+                                <b>Schalander der Brauerei Franz</b><br>
+                                Rauentaler Str. 4<br>
+                                76437 Rastatt
+                            </addr>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-width-2-6@m">
+                    {{ form_widget(form.participateBegruessungsabend) }}
+                    {{ form_label(form.participateBegruessungsabend) }}
+                </div>
+                <div class="uk-width-1-6@m">
+                    {{ form_row(form.guestsBegruessungsabend) }}
+                </div>
+            </div>
+
+            <hr>
+
+            <p class="uk-text-lead">Kulturbummel</p>
+
+            <div uk-grid class="uk-child-width-expand">
+                <div uk-grid class="uk-width-1-2@m">
+                    <div uk-grid class="uk-child-width-expand uk-width-1-1">
+                        <div class="uk-width-1-6">
+                            <span uk-icon="icon: calendar; ratio: 2">
+                        </div>
+                        <div class="uk-width-5-6">
+                            <b>
+                                Samstag, 1. Juli 2023, 10:30&nbsp;Uhr&nbsp;<abbr title="pünktlicher Beginn">s.t.</abbr>
+                            </b>
+                        </div>
+                    </div>
+                    <div uk-grid class="uk-child-width-expand uk-width-1-1">
+                        <div class="uk-width-1-6">
+                            <span uk-icon="icon: location; ratio: 2">
+                        </div>
+                        <div class="uk-width-5-6">
+                            <addr>
+                                Treffpunkt: <b>Trinkhalle Baden-Baden</b><br>
+                                Kaiserallee 3<br>
+                                76530 Baden-Baden
+                            </addr>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    {{ form_widget(form.participateKulturbummel) }}
+                    {{ form_label(form.participateKulturbummel) }}
+                </div>
+                <div>
+                    {{ form_row(form.guestsKulturbummel) }}
+                </div>
+            </div>
+
+            <hr>
+
+            <p class="uk-text-lead">Gemeinsames Abendessen</p>
+
+            <div uk-grid class="uk-child-width-expand">
+                <div uk-grid class="uk-width-1-2@m">
+                    <div uk-grid class="uk-child-width-expand uk-width-1-1">
+                        <div class="uk-width-1-6">
+                            <span uk-icon="icon: calendar; ratio: 2">
+                        </div>
+                        <div class="uk-width-5-6">
+                            <b>
+                                Samstag, 1. Juli 2023, 18:00&nbsp;Uhr&nbsp;<abbr title="mit akademischem Viertel">c.t.</abbr>
+                            </b>
+                        </div>
+                    </div>
+                    <div uk-grid class="uk-child-width-expand uk-width-1-1">
+                        <div class="uk-width-1-6">
+                            <span uk-icon="icon: location; ratio: 2">
+                        </div>
+                        <div class="uk-width-5-6">
+                            <addr>
+                                <b>Gasthaus Blume Balg</b><br>
+                                Balger Hauptstr. 68<br>
+                                76532 Baden-Baden
+                            </addr>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    {{ form_widget(form.participateAbendessen) }}
+                    {{ form_label(form.participateAbendessen) }}
+                </div>
+                <div>
+                    {{ form_row(form.guestsAbendessen) }}
+                </div>
+            </div>
+
+            <hr>
+
+            <p class="uk-text-lead">Festkommers</p>
+
+            <div uk-grid class="uk-child-width-expand">
+                <div uk-grid class="uk-width-1-2@m">
+                    <div uk-grid class="uk-child-width-expand uk-width-1-1">
+                        <div class="uk-width-1-6">
+                            <span uk-icon="icon: calendar; ratio: 2">
+                        </div>
+                        <div class="uk-width-5-6">
+                            <b>
+                                Samstag, 1. Juli 2023, 20:00&nbsp;Uhr&nbsp;<abbr title="mit akademischem Viertel">c.t.</abbr>
+                            </b>
+                        </div>
+                    </div>
+                    <div uk-grid class="uk-child-width-expand uk-width-1-1">
+                        <div class="uk-width-1-6">
+                            <span uk-icon="icon: location; ratio: 2">
+                        </div>
+                        <div class="uk-width-5-6">
+                            <addr>
+                                <b>Gasthaus Blume Balg</b><br>
+                                Balger Hauptstr. 68<br>
+                                76532 Baden-Baden
+                            </addr>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    {{ form_widget(form.participateFestkommers) }}
+                    {{ form_label(form.participateFestkommers) }}
+                </div>
+                <div>
+                    {{ form_row(form.guestsFestkommers) }}
+                </div>
+            </div>
+
+            <hr>
+
+            <p class="uk-text-lead">Frühschoppen</p>
+
+            <div uk-grid class="uk-child-width-expand">
+                <div uk-grid class="uk-width-1-2@m">
+                    <div uk-grid class="uk-child-width-expand uk-width-1-1">
+                        <div class="uk-width-1-6">
+                            <span uk-icon="icon: calendar; ratio: 2">
+                        </div>
+                        <div class="uk-width-5-6">
+                            <b>
+                                Sonntag, 2. Juli 2023, 11:00&nbsp;Uhr&nbsp;<abbr title="mit akademischem Viertel">c.t.</abbr>
+                            </b>
+                        </div>
+                    </div>
+                    <div uk-grid class="uk-child-width-expand uk-width-1-1">
+                        <div class="uk-width-1-6">
+                            <span uk-icon="icon: location; ratio: 2">
+                        </div>
+                        <div class="uk-width-5-6">
+                            <addr>
+                                <b>Schnitzelbräu Rastatt</b><br>
+                                Poststr. 12<br>
+                                76437 Rastatt
+                            </addr>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    {{ form_widget(form.participateFruehschoppen) }}
+                    {{ form_label(form.participateFruehschoppen) }}
+                </div>
+                <div>
+                    {{ form_row(form.guestsFruehschoppen) }}
+                </div>
+            </div>
+
+            <h2 class="uk-heading-small">Anmeldung abschicken</h2>
+
+            <button type="submit" class="uk-button uk-button-primary uk-button-large uk-width-1-1">
+                Jetzt verbindlich anmelden
+            </button>
+        {{ form_end(form, {render_rest: false}) }}
+    </div>
+{% endblock %}
